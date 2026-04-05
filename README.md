@@ -4,13 +4,15 @@
 
 This project demonstrates how to containerize a web application (2048 Game) using Docker and deploy it on AWS Elastic Beanstalk.
 
+The application is served using Nginx inside a Docker container and hosted on AWS with a public URL.
+
 ---
 
 ## 🛠️ Tech Stack
 
 * Docker
 * AWS Elastic Beanstalk
-* IAM
+* IAM (Identity and Access Management)
 * Nginx
 * Ubuntu
 
@@ -22,6 +24,8 @@ This project demonstrates how to containerize a web application (2048 Game) usin
 2048/
 │── Dockerfile
 │── README.md
+│── images/
+│    └── output.png
 ```
 
 ---
@@ -34,7 +38,7 @@ This project demonstrates how to containerize a web application (2048 Game) usin
 docker build -t 2048-game .
 ```
 
-### Run Container (Optional)
+### Run Container (Optional - Local Testing)
 
 ```bash
 docker run -d -p 80:80 2048-game
@@ -42,23 +46,34 @@ docker run -d -p 80:80 2048-game
 
 ---
 
-## ☁️ AWS Deployment
+## ☁️ AWS Deployment (Elastic Beanstalk)
 
 ### Steps:
 
 1. Created Elastic Beanstalk environment
-2. Configured IAM roles (Service Role + EC2 Role)
+2. Configured IAM roles:
+
+   * Service Role (Elastic Beanstalk)
+   * EC2 Instance Profile
 3. Selected Docker platform
 4. Uploaded project files
-5. Deployed application
+5. Deployed application successfully
 
 ---
 
 ## 🌍 Application URL
 
 ```
-http://2048-game-env.eba-k2majypx.ap-south-1.elasticbeanstalk.com/
+http://<your-elastic-beanstalk-url>
 ```
+
+---
+
+## 📸 Application Output
+
+<p align="center">
+  <img src="images/output.png" width="700"/>
+</p>
 
 ---
 
@@ -89,7 +104,7 @@ unzip: cannot find zipfile directory
 
 **Cause:**
 
-* Used incorrect GitHub `.git` URL instead of ZIP
+* Used incorrect GitHub `.git` URL instead of ZIP download link
 
 **Fix:**
 
@@ -106,20 +121,26 @@ curl -L -o master.zip https://github.com/gabrielecirulli/2048/archive/refs/heads
 ## 💡 Key Learnings
 
 * Docker containerization
-* AWS Elastic Beanstalk deployment
+* Deploying applications using AWS Elastic Beanstalk
 * IAM role configuration
-* Debugging real-world errors
+* Debugging real-world deployment issues
 
 ---
 
 ## 🚀 Future Improvements
 
-* Add CI/CD pipeline
+* Add CI/CD pipeline (GitHub Actions / Jenkins)
 * Deploy using Kubernetes
-* Add HTTPS with custom domain
+* Configure HTTPS with custom domain
 
 ---
 
 ## 👩‍💻 Author
 
-Meghaa
+**Meghaa**
+
+---
+
+## ⭐ Acknowledgment
+
+This project was built as part of hands-on DevOps learning and practice.
