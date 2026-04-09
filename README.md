@@ -1,6 +1,6 @@
-# 🚀 2048 Game Deployment using Docker & AWS Elastic Beanstalk
+#  2048 Game Deployment using Docker & AWS Elastic Beanstalk
 
-## 📌 Project Overview
+##  Project Overview
 
 This project demonstrates how to containerize a web application (2048 Game) using Docker and deploy it on AWS Elastic Beanstalk.
 
@@ -8,7 +8,7 @@ The application is served using Nginx inside a Docker container and hosted on AW
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 * Docker
 * AWS Elastic Beanstalk
@@ -18,7 +18,7 @@ The application is served using Nginx inside a Docker container and hosted on AW
 
 ---
 
-## 📂 Project Structure
+##  Project Structure
 
 ```
 2048/
@@ -30,7 +30,7 @@ The application is served using Nginx inside a Docker container and hosted on AW
 
 ---
 
-## 🐳 Docker Setup
+##  Docker Setup
 
 ### Build Docker Image
 
@@ -46,7 +46,7 @@ docker run -d -p 80:80 2048-game
 
 ---
 
-## ☁️ AWS Deployment (Elastic Beanstalk)
+##  AWS Deployment (Elastic Beanstalk)
 
 ### Steps:
 
@@ -61,7 +61,7 @@ docker run -d -p 80:80 2048-game
 
 ---
 
-## 🌍 Application URL
+##  Application URL
 
 ```
 http://<your-elastic-beanstalk-url>
@@ -69,7 +69,7 @@ http://<your-elastic-beanstalk-url>
 
 ---
 
-## 📸 Application Output
+##  Application Output
 
 <p align="center">
   <img src="images/output.png" width="700"/>
@@ -77,9 +77,9 @@ http://<your-elastic-beanstalk-url>
 
 ---
 
-## ⚠️ Challenges Faced & Fixes
+##  Challenges Faced & Fixes
 
-### ❌ Docker Engine Error
+###  Docker Engine Error
 
 **Issue:**
 
@@ -94,7 +94,7 @@ dockerDesktopLinuxEngine not found
 
 ---
 
-### ❌ Invalid ZIP File Error
+###  Invalid ZIP File Error
 
 **Issue:**
 
@@ -118,7 +118,7 @@ curl -L -o master.zip https://github.com/gabrielecirulli/2048/archive/refs/heads
 
 ---
 
-## 💡 Key Learnings
+##  Key Learnings
 
 * Docker containerization
 * Deploying applications using AWS Elastic Beanstalk
@@ -127,7 +127,7 @@ curl -L -o master.zip https://github.com/gabrielecirulli/2048/archive/refs/heads
 
 ---
 
-## 🚀 Future Improvements
+##  Future Improvements
 
 * Add CI/CD pipeline (GitHub Actions / Jenkins)
 * Deploy using Kubernetes
@@ -135,12 +135,12 @@ curl -L -o master.zip https://github.com/gabrielecirulli/2048/archive/refs/heads
 
 ---
 
-## 👩‍💻 Author
+##  Author
 
 **Meghaa**
 
 ---
 
-## ⭐ Acknowledgment
+##  Acknowledgment
 
 This project was built as part of hands-on DevOps learning and practice.
